@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Checklist Week-end</title>
+  <link rel="icon" type="image/png" href="../logo.png" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <a href="index.html">
+    <img src="fleur-de-lis.png" class="center" style="cursor:pointer;" />
+  </a>
+
+  <h1>Checklist – Week-end Scout d'Europe</h1>
+
+  <div class="center-red">
+    <label for="season">Choisir la saison :</label>
+    <select id="season" onchange="toggleSeason()">
+      <option value="ete">☀️ Été</option>
+      <option value="hiver">❄️ Hiver</option>
+    </select>
+  </div>
+
+  <div class="category">
+    <h2>🧳 Vêtements</h2>
+    <div id="common-clothes">
+      <label class="important"><input type="checkbox"> Uniforme complet (chemise, foulard, ceinture, béret, short)</label>
+      <label><input type="checkbox"> 2 t-shirts</label>
+      <label><input type="checkbox"> Sous-vêtements</label>
+      <label><input type="checkbox"> 2 paires de chaussettes blanche pour dimanche</label>
+      <label><input type="checkbox"> Chaussures de marche</label>
+    </div>
+    <div id="ete-clothes">
+      <label class="important"><input type="checkbox"> chapeau</label>
+      <label><input type="checkbox"> Veste légère ou coupe-vent</label>
+    </div>
+    <div id="hiver-clothes" class="hidden">
+      <label><input type="checkbox"> Bonnet chaud</label>
+      <label class="important"><input type="checkbox"> Gants</label>
+      <label><input type="checkbox"> Écharpe ou tour de cou</label>
+      <label class="important"><input type="checkbox"> Veste chaude</label>
+      <label><input type="checkbox"> 1 pantalon solide</label>
+      <label class="important"><input type="checkbox"> Pull ou polaire supplémentaire</label>
+    </div>
+  </div>
+
+    <div class="category">
+      <h2>5 objet</h2>
+      <label class="important"><input type="checkbox"> Carnet/papier</label>
+      <label class="important"><input type="checkbox"> Crayon/stylo</label>
+      <label class="important"><input type="checkbox"> Dizainier</label>
+      <label class="important"><input type="checkbox"> Mouchoir</label>
+      <label class="important"><input type="checkbox"> Ficelle</label>
+    </div>
+
+
+  <div class="category">
+    <h2>🛏️ Couchage</h2>
+    <label class="important"><input type="checkbox"> Sac de couchage adapté à la saison</label>
+    <label><input type="checkbox"> Tapis de sol (matelas mousse)</label>
+</div>
+
+  <div class="category">
+    <h2>🍽️ Matériel de camp</h2>
+    <label><input type="checkbox"> Gamelle / quart</label>
+    <label><input type="checkbox"> Couverts</label>
+    <label class="important"><input type="checkbox"> Gourde (2 L min.)</label>
+    <label><input type="checkbox"> Couteau qui coupe </label>
+    <label><input type="checkbox"> Lampe frontale</label>
+    <label><input type="checkbox"> Sac à dos (30-50 L)</label>
+    <label><input type="checkbox"> Petite trousse de secours</label>
+</div>
+
+  <div class="category">
+    <h2>🧼 Hygiène</h2>
+    <label class="important"><input type="checkbox"> Brosse à dents + dentifrice</label>
+    <label><input type="checkbox"> Mouchoirs / papier toilette</label>
+</div>
+
+  <div class="category">
+    <h2>📖 Divers</h2>
+    <label class="important"><input type="checkbox"> Carnet de chant (Hodari)</label>
+    <label class="important"><input type="checkbox"> Carnet de progression (Pistes)</label>
+    <label class="important"><input type="checkbox"> Carte d’identité</label>
+</div>
+
+  <div class="category">
+    <h2 class="important">🏕️ Équipement collectif (à vérifier)</h2>
+    <label><input type="checkbox"> Tente</label>
+    <label><input type="checkbox"> Marmites / matériel de cuisine</label>
+    <label><input type="checkbox"> allume-feu</label>
+    <label><input type="checkbox"> Nourriture (4 repas + goûters)</label>
+    <label><input type="checkbox"> Réserve d’eau (GQ)</label>
+    <label><input type="checkbox"> Kit de premiers secours</label>
+    <label><input type="checkbox"> Matériel liturgique</label>
+    <label><input type="checkbox"> Carte / boussole</label>
+    <label><input type="checkbox"> Matériel de jeu</label>
+</div>
+
+  <script>
+    function toggleSeason() {
+      const season = document.getElementById("season").value;
+      document.getElementById("ete-clothes").classList.toggle("hidden", season !== "ete");
+      document.getElementById("hiver-clothes").classList.toggle("hidden", season !== "hiver");
+    }
+  </script>
+</body>
+</html>

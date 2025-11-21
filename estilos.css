@@ -1,0 +1,56 @@
+img {
+    max-width:10%;
+    max-height:10%;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background: #0e57a0;
+    padding: 2em;
+    max-width: 800px;
+    margin: auto;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#escolhaCifra {
+    padding: 3px;
+    margin-bottom: 20px;
+}
+
+.codOuDecod{
+    margin-bottom: 20px;
+}
+
+#base64, #cesar {
+    display: none;
+    justify-content: center;
+}
+
+#incremento {
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.input {
+    width:30%;
+}
+
+#label64 {
+    margin-bottom: 20px;
+}
+
+
+
