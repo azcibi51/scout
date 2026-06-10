@@ -138,6 +138,12 @@
     <label class="important"><input type="checkbox"> Fiche sanitaire</label>
   </div>
 
+  <footer>
+    <p>&copy; <span id="year"></span> - Checklist Camp Scout d'Europe. Tous droits réservés.</p>
+    <p>Prêts ? En route !</p>
+    <a href="#" class="back-to-top">Retour en haut ↑</a>
+  </footer>
+
   <script>
     function calcQty(days) {
       if (days <= 10) return days;
@@ -182,6 +188,9 @@
     window.onload = updateQuantities;
     document.getElementById('duration').addEventListener('change', updateQuantities);
     document.getElementById('start-day').addEventListener('change', updateQuantities);
+
+
+    document.getElementById('year').innerText = new Date().getFullYear();
 
   
   </script>
