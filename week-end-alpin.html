@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Checklist Week-end Alpin - Scouts Alpins</title>
+        <link rel="icon" type="image/png" href="logo.png" />
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <a href="index.html">
+            <img src="fleur-de-lis.png" class="center" style="cursor:pointer;" />
+        </a>
+
+        <h1>Checklist – Week-end Scout Alpin</h1>
+
+        <div class="center-red">
+            <label for="season">Choisir la saison :</label>
+            <select id="season" onchange="toggleSeason()">
+                <option value="hiver">❄️ Hiver</option>
+                <option value="ete">☀️ Été</option>
+            </select>
+        </div>
+
+        <div class="category">
+            <h2>🧳 Vêtements</h2>
+
+            <!--    hiver   -->
+            <div id="hiver-clothes">
+                <label class="important">
+                    <input type="checkbox"> 
+                    Uniforme complet (
+                        <a href="https://www.carrick.fr/uniforme/knickers/1960-knickers-peeter-3486380238108.html#/6-couleur-marine/44-taille-10_ans" style="color: red; text-decoration: none;">knickers</a>, 
+                        chemise et Pull, 
+                        foulard, 
+                        ceinture, 
+                        bonnet blanches en laine
+                    )
+                </label>
+                <label class="important"><input type="checkbox"> Lunettes de soleil catégorie 4</label>
+                <label class="important"><input type="checkbox"> Tour de cou (buff)</label>
+                <label class="important"><input type="checkbox"> Gants étanches et chaud</label>
+                <label class="important"><input type="checkbox"> Veste chaude</label>
+                <label><input type="checkbox"> 2 t-shirts de rechange</label>
+                <label><input type="checkbox"> Sous-vêtements de rechange</label>
+                <label><input type="checkbox"> 1 paires de chaussettes blanches pour le dimanche + 1-2 de rechange</label>
+
+                
+                <label><input type="checkbox"> Pull chaud / polaire</label>
+                <label><input type="checkbox"> Collant thermique (si grand froid)</label>
+            </div>
+
+            <!--    Ete     -->
+            <div id="ete-clothes" class="hidden">
+                <label class="important">
+                    <input type="checkbox"> 
+                    Uniforme complet (
+                        <a href="https://www.carrick.fr/uniforme/knickers/1960-knickers-peeter-3486380238108.html#/6-couleur-marine/44-taille-10_ans" style="color: red; text-decoration: none;">knickers</a>
+                        (ou bermuda), 
+                        chemise (et Pull), 
+                        foulard, 
+                        ceinture, 
+                        <a href="https://www.carrick.fr/uniforme/couvre-chefs/1757-beret-montagne-marine-3486380203557.html#/6-couleur-marine/297-tour_de_tete-55_cm" style="color: red; text-decoration: none;">tarte</a>
+                    )
+                </label>
+                <label class="important"><input type="checkbox"> Lunettes de soleil (catégorie 3 ou 4)</label>
+                <label><input type="checkbox"> t-shirts de rechange</label>
+                <label><input type="checkbox"> Sous-vêtements de rechange</label>
+                <label><input type="checkbox"> 1 paires de chaussettes blanches pour le dimanche</label>
+                <label><input type="checkbox"> Chaussures de montagne / randonnée </label>
+                <label><input type="checkbox"> Veste légère ou coupe-vent</label>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>🖐️ 5 objets</h2>
+            <label class="important"><input type="checkbox"> Carnet/papier</label>
+            <label class="important"><input type="checkbox"> Crayon/stylo</label>
+            <label class="important"><input type="checkbox"> Dizainier</label>
+            <label class="important"><input type="checkbox"> Mouchoir</label>
+            <label class="important"><input type="checkbox"> Ficelle</label>
+        </div>
+
+        <div class="category">
+            <h2>🛏️ Couchage</h2>
+
+            <!--    hiver   -->
+            <div class="season-item hiver">
+                <label class="important"><input type="checkbox"> Sac de couchage hiver (température confort -10°C à -15°C)</label>
+                <label><input type="checkbox"> Drap de sac ("sac à viande")</label>
+            </div>
+
+            <!--    Ete     -->
+            <div class="season-item ete hidden">
+                <label class="important"><input type="checkbox"> Sac de couchage</label>
+            </div>
+            <label><input type="checkbox"> Tapis de sol (en mousse)</label>
+            <label><input type="checkbox"> Pyjama/tenue de nuit (adapter a la température) </label>
+        </div>
+
+        <div class="category">
+            <h2>🍽️ Matériel de camp</h2>
+            <label><input type="checkbox"> Gamelle / quart</label>
+            <label><input type="checkbox"> Couverts</label>
+            <label class="important"><input type="checkbox"> Gourde isotherme (1,5 L à 2 L min.)</label>
+            <label><input type="checkbox"> Couteau qui coupe (Opinel)</label>
+            <label class="important"><input type="checkbox"> Lampe frontale (qui marche)</label>
+            <label><input type="checkbox"> Sac à dos (35-50 L) + housse de protection pour la pluie</label>
+        </div>  
+
+        <div class="category">
+            <h2>🧼 Hygiène & Protection</h2>
+            <label class="important"><input type="checkbox"> Brosse à dents + dentifrice</label>
+            <label class="important"><input type="checkbox"> Crème solaire & baume à lèvres</label>
+            <label><input type="checkbox"> Mouchoirs</label>
+        </div>
+
+        <div class="category">
+            <h2>📖 Divers</h2>
+            <label class="important"><input type="checkbox"> Carnet de chant (Hodari)</label>
+            <label class="important"><input type="checkbox"> Carnet de progression (Pistes)</label>
+            <label><input type="checkbox"> Carte d’identité</label>
+        </div>
+
+        <div class="category">
+            <h2 class="important">🏕️ Équipement collectif & Alpin (à vérifier)</h2>
+            <label><input type="checkbox"> Matériel de sécurité (DVA, pelle, sonde si nécessaire)</label>
+            <label><input type="checkbox"> Tente d'hiver</label>
+            <label><input type="checkbox"> Matériel de cuisine (réchaud si pas de feu)</label>
+            <label><input type="checkbox"> Allume-feu & nécessaire de feu (si autorijation)</label>
+            <label><input type="checkbox"> Réserve d’eau (GQ)</label>
+            <label class="important"><input type="checkbox"> Kit de premiers secours complet</label>
+            <label><input type="checkbox"> Matériel liturgique</label>
+            <label><input type="checkbox"> Carte IGN / boussole</label>
+            <label><input type="checkbox"> Matériel de froissartage (scies, hache, ficelle, bâche si nécessaire)</label>
+        </div>
+
+        <script>
+            function toggleSeason() {
+                const season = document.getElementById("season").value;
+                
+                // On masque/affiche tous les éléments de la classe "hiver"
+                document.querySelectorAll(".hiver").forEach(el => {
+                    el.classList.toggle("hidden", season !== "hiver");
+                });
+
+                // On masque/affiche tous les éléments de la classe "ete"
+                document.querySelectorAll(".ete").forEach(el => {
+                    el.classList.toggle("hidden", season !== "ete");
+                });
+            }
+        </script>
+    </body>
+</html>
